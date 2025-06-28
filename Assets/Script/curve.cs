@@ -23,7 +23,6 @@ public class curve : MonoBehaviour
         int grid_x = (int)(pos_x / 0.75f);
         int grid_y = (int)(pos_y / -0.75f);
 
-
         gridarray.Instance.grid[grid_y, grid_x] = "";
 
         if (zRotation == 0)
