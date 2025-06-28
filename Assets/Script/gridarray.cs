@@ -21,7 +21,7 @@ public class gridarray : MonoBehaviour
         {
             for (int x = 0; x < grid.GetLength(1); x++)
             {
-                grid[y, x] = "0";
+                grid[y, x] = "";
             }
         }
 

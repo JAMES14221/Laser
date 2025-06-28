@@ -14,7 +14,7 @@ public class rotate : MonoBehaviour
         {
             for (int x = 0; x < gridarray.Instance.grid.GetLength(1); x++)
             {
-                gridarray.Instance.grid[y, x] = "0";
+                gridarray.Instance.grid[y, x] = "";
             }
         }
 
