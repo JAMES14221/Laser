@@ -21,22 +21,24 @@ public class gridarray : MonoBehaviour
         {
             for (int x = 0; x < grid.GetLength(1); x++)
             {
-                grid[y, x] = "0"; 
+                grid[y, x] = "0";
             }
         }
 
+    }
 
-
-
+    private void Update()
+    {
         bool BulbsActiveState()
         {
             GameObject[] tiles = GameObject.FindGameObjectsWithTag("bulb");
 
+
             foreach (GameObject tile in tiles)
             {
                 Vector3 pos = tile.transform.localPosition;
-                int x = Mathf.RoundToInt(pos.x / 0.75f);
-                int y = Mathf.RoundToInt(pos.y / 0.75f);
+                int x = (int)(pos.x / 0.75f);
+                int y = (int)(pos.y / -0.75f);
 
                 if (!gridarray.Instance.grid[y, x].Contains("5"))
                 {
@@ -51,10 +53,8 @@ public class gridarray : MonoBehaviour
         int num = int.Parse(currentScene);
         num += 1;
         string name = num.ToString();
-        if (BulbsActiveState()) { SceneManager.LoadScene(name); ; }
 
-
-
+        if (BulbsActiveState()) { SceneManager.LoadScene(name); }
     }
 }
 

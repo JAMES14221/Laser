@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class rotate : MonoBehaviour
-{ 
+{
+    void Start()
+    {
+        int randomValue = Random.Range(1, 5);
+        int rotval = randomValue * 90;
+        transform.Rotate(0,0,rotval);
 
+    }
     void OnMouseDown()
     {
         // Rotate 90 degrees around the Y axis
@@ -16,5 +23,11 @@ public class rotate : MonoBehaviour
                 gridarray.Instance.grid[y, x] = "0";
             }
         }
+
+
     }
+
+
+
+
 }
